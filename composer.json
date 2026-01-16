@@ -1,0 +1,16 @@
+{
+  "name": "mateu/carinho-compras",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Mateus Paulino",
+      "email": "mateusgpaulino@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
