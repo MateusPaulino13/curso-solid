@@ -21,12 +21,13 @@ class EmailService
         $this->conteudo = $conteudo;
     }
 
-    public static function dispararEmail($de, $para, $assunto, $conteudo)
+    public static function dispararEmail(/*$de, $para, $assunto, $conteudo*/)
     {
-        $email = new EmailService($de, $para, $assunto, $conteudo);
-        // Lógica para disparar o email
-        echo "Email disparado para: " . $email->para . "\n";
-        echo "Assunto: " . $email->assunto . "\n";
-        echo "Conteúdo: " . $email->conteudo . "\n";
+        return "-- email enviado --";
+        // $email = new EmailService($de, $para, $assunto, $conteudo);
+        // // Lógica para disparar o email
+        // echo "Email disparado para: " . $email->para . "\n";
+        // echo "Assunto: " . $email->assunto . "\n";
+        // echo "Conteúdo: " . $email->conteudo . "\n";
     }
 }
