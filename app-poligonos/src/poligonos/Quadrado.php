@@ -1,9 +1,12 @@
 <?php
 
-namespace src;
+namespace src\poligonos;
 
 class Quadrado extends Retangulo
 {
+    protected $largura;
+    protected $altura;
+
     public function setAltura($lado): void
     {
         $this->largura = $lado;
@@ -14,5 +17,15 @@ class Quadrado extends Retangulo
     {
         $this->largura = $lado;
         $this->altura = $lado;
+    }
+
+    public function getLargura(): float
+    {
+        return $this->largura;
+    }
+
+    public function getAltura(): float
+    {
+        return $this->altura;
     }
 }
