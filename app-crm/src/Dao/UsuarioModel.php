@@ -5,9 +5,12 @@ namespace App\dao;
 use App\BD;
 use App\componentes\Log;
 use App\componentes\Notificacao;
-use App\interfaces\ICadastro;
 
-class UsuarioModel extends BD implements ICadastro
+use App\interfaces\ICadastro;
+use App\interfaces\ILog;
+use App\interfaces\INotificacao;
+
+class UsuarioModel extends BD implements ICadastro, ILog, INotificacao
 {
     public function salvar()
     {

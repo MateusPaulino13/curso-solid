@@ -3,20 +3,15 @@
 namespace App\dao;
 
 use App\BD;
-use App\componentes\Log;
 use App\componentes\Notificacao;
 use App\interfaces\ICadastro;
+use App\interfaces\INotificacaow;
 
-class LeadModel extends BD implements ICadastro
+class Lead extends BD implements ICadastro, INotificacao
 {
     public function salvar()
     {
         // Implementação do método salvar
-    }
-
-    public function registrarLog(Log $log)
-    {
-        // Implementação do método registrarLog
     }
 
     public function enviarNotificacao(Notificacao $notificacao)
