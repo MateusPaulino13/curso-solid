@@ -2,26 +2,29 @@
 
 namespace App;
 
-use App\Email;
+use App\interfaces\IMensagemToken;
 
 class Mensageiro
 {
     private $canal;
 
-    public function getCanal(): string
+    public function __construct(IMensagemToken $canal) //inversão de dependência
+    {
+        $this->setCanal($canal);
+    }
+
+    public function getCanal(): IMensagemToken
     {
         return $this->canal;
     }
 
-    public function setCanal(string $canal): void
+    public function setCanal(IMensagemToken $canal): void
     {
         $this->canal = $canal;
     }
 
     public function enviarToken(): void
     {
-        $classe = "\src\\" . ucfirst($this->getCanal());
-        $obj = new $classe();
-        $obj->enviarToken();
+        $this->getCanal()->enviar();
     }
 }
